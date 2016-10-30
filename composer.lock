@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "563c2ca1fa1ccb123e7ebb722a3e626a",
-    "content-hash": "a796f2894de27697f5fa813073d19516",
+    "hash": "54b82a70238c3a034238f414932739b8",
+    "content-hash": "9e113d1e9c79f0b158f824b314217672",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -991,20 +991,21 @@
         },
         {
             "name": "respect/validation",
-            "version": "1.0.3",
+            "version": "1.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Respect/Validation.git",
-                "reference": "0c536453114987b7e0f6f72369d3be0af8dd1109"
+                "reference": "710e807a68aa79b992d85defb60b36a59745ae91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/0c536453114987b7e0f6f72369d3be0af8dd1109",
-                "reference": "0c536453114987b7e0f6f72369d3be0af8dd1109",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/710e807a68aa79b992d85defb60b36a59745ae91",
+                "reference": "710e807a68aa79b992d85defb60b36a59745ae91",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4"
+                "php": ">=5.4",
+                "symfony/polyfill-mbstring": "^1.2"
             },
             "require-dev": {
                 "egulias/email-validator": "~1.2",
@@ -1026,7 +1027,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -1045,13 +1046,13 @@
                 }
             ],
             "description": "The most awesome validation engine ever created for PHP",
-            "homepage": "http://respect.li",
+            "homepage": "http://respect.github.io/Validation/",
             "keywords": [
                 "respect",
                 "validation",
                 "validator"
             ],
-            "time": "2015-11-25 20:03:11"
+            "time": "2016-10-29 13:29:17"
         },
         {
             "name": "robmorgan/phinx",

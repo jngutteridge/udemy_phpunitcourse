@@ -33,4 +33,56 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         $validator->setIsValid(false);
         $this->assertFalse($validator->getIsValid());
     }
+
+    /**
+     * @test
+     */
+    public function checkForMinStringLengthWithValidData()
+    {
+        $request = new Request(['minType' => 'yellow']);
+        $response = new Response($request);
+        $validator = new Validator($request, $response);
+
+        $errors = $validator->check(['minType' => 'min:3']);
+        $this->assertCount(0, $errors);
+    }
+
+    /**
+     * @test
+     */
+    public function checkForMinStringLengthWithInalidData()
+    {
+        $request = new Request(['minType' => 'x']);
+        $response = new Response($request);
+        $validator = new Validator($request, $response);
+
+        $errors = $validator->check(['minType' => 'min:3']);
+        $this->assertCount(1, $errors);
+    }
+
+    /**
+     * @test
+     */
+    public function checkForEmailWithWithValidData()
+    {
+        $request = new Request(['emailType' => 'test@debug.jng.me.uk']);
+        $response = new Response($request);
+        $validator = new Validator($request, $response);
+
+        $errors = $validator->check(['emailType' => 'email']);
+        $this->assertCount(0, $errors);
+    }
+
+    /**
+     * @test
+     */
+    public function checkForEmailWithWithInvalidData()
+    {
+        $request = new Request(['emailType' => 'bademail.debug.jng.me.uk']);
+        $response = new Response($request);
+        $validator = new Validator($request, $response);
+
+        $errors = $validator->check(['emailType' => 'email']);
+        $this->assertCount(1, $errors);
+    }
 }
